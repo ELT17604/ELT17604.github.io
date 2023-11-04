@@ -1,16 +1,40 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>personal page</title>
-<style type="text/css">
-.title {
-}
-</style>
-</head>
+  <meta charset="UTF-8">
+  <title>两栏文字的HTML5示例</title>
+  <style>
+    /* 定义两栏布局的样式 */
+    .container {
+      display: flex; /* 使用flex布局 */
+    }
 
-<body class="title">
-<p> test</p>
-<p>&nbsp;</p>
+    .column {
+      flex: 1; /* 两栏等宽 */
+      padding: 10px; /* 添加内边距 */
+    }
+
+    .left {
+      background-color: lightblue; /* 左栏背景色 */
+    }
+
+    .right {
+      background-color: cadetblue; /* 右栏背景色 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> <!-- 定义一个容器div -->
+    <div class="column left"> <!-- 定义左栏div -->
+      <h2>这是左栏的标题</h2>
+      <p>这是左栏的第一个段落。</p>
+      <p>这是左栏的第二个段落。</p>
+    </div>
+    <div class="column right"> <!-- 定义右栏div -->
+      <h2>这是右栏的标题</h2>
+      <p>这是右栏的第一个段落。</p>
+      <p>这是右栏的第二个段落。</p>
+    </div>
+  </div>
 </body>
 </html>
