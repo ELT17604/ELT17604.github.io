@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Push数字</title>
+<script>
+function sendPushPlusMessage(token, title, content) {
+  fetch('http://www.pushplus.plus/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "token": token,
+      "title": title,
+      "content": content,
+      "template": "html"
+    })
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch((error) => console.error('Error:', error));
+}
+
+function getUserInputAndSendMessage() {
+  var userInput = document.getElementById("numberInput").value;
+  var number = parseInt(userInput, 10);
+  
+  if (!isNaN(number)) {
+    // 替换为您的pushplus token
+    const yourToken = '82bdf01bfd1e4d1b9c7fd311fa16c605';
+    // 消息标题
+    const messageTitle = '用户输入数字';
+    // 将用户输入的数字作为消息内容
+    sendPushPlusMessage(yourToken, messageTitle, number.toString());
+  } else {
+    console.log("用户输入的不是有效数字。");
+  }
+}
+</script>
+</head>
+<body>
+<!-- 创建一个数字输入框 -->
+<input type="number" id="numberInput" placeholder="请输入数字">
+<!-- 创建一个按钮，点击时获取输入并发送消息 -->
+<button onclick="getUserInputAndSendMessage()">发送</button>
+</body>
+</html>
