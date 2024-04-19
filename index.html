@@ -1,31 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELT Site Main</title>
-    <style>
+<html lang="zh-CN">
+	<style>
 		
         body {
-			text-align: left;
             font-family: Arial, sans-serif;
         }
         .footer {
-            text-align: left;
-            margin-top: 100px;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
+<head>
+  <meta charset="UTF-8">
+  <title>ELT Site</title>
+  <style>
+    /* 定义两栏布局的样式 */
+    .container {
+      display: flex; /* 使用flex布局 */
+    }
+
+    .column {
+      flex: 1; /* 两栏等宽 */
+      padding: 10px; /* 添加内边距 */
+    }
+
+    .left {
+    }
+
+    .right {
+    }
+  </style>
 </head>
 <body>
-    <h1>Test Main Guide</h1>
-    <li><a href="https://elt17604.eu.org:1919">r5s管理界面</a></li>
-    <li><a href="https://elt17604.eu.org:1919/404.html">r5s网站界面</a></li>
-	<li><a href="/gputest/index.html">GPU Test页面</a></li>
-	<li><a href="/cat/index.html">新版网站页面</a></li>
-	<li><a href="/404.html">404测试界面</a></li>
-	
-    <div class="footer">
-        <p>Copyright © 2024.ELT Group All Rights Reserved.</p>
+  <header>
+    <h1>Main</h1>
+  </header>
+<div class="container">
+  <nav class="column left">
+      <ul>
+		<h2><em><strong>Guide</strong></em></h2>
+		<li><a href="https://elt17604.eu.org:1919">r5s管理界面</a></li>
+        <li><a href="https://elt17604.eu.org:1919/404.html">r5s网站界面</a></li>
+        <li><a href="/gputest/index.html">GPU Test页面</a></li>
+        <li><a href="/cat/index.html">新版网站页面</a></li>
+        <li><a href="/404.html">404测试界面</a></li>
+      </ul>
+  </nav>
+  <main class="column right">
+    <h2><em><strong>Weather</strong></em></h2>
+    <div id="ww_234fa92bf10d6" v="1.3" loc="auto" a='{"t":"horizontal","lang":"zh","sl_lpl":1,"ids":[],"font":"Times","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"#000000","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+        <a href="https://weatherwidget.org/" id="ww_234fa92bf10d6_u" target="_blank">Free weather widget for website</a>
     </div>
+    <script async src="https://app2.weatherwidget.org/js/?id=ww_234fa92bf10d6"></script>  
+	</main>
+  </div>
+  <footer class="footer">
+    <p>Copyright © 2024.ELT Group All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
