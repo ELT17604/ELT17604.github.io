@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CallToMoveCar </title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .custom-text {
+    margin-top: 20px;
+    text-align: center;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    font-size: 14px;
+  }
+  
+  /* 深色模式样式 */
+  @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    }
+  .button {
+    background-color: #3a6ea5;
+    }
+  .custom-text {
+    }
+  footer {
+    background-color: #1c1c1c;
+    }
+  }
+  
+</style>
+</head>
+<body>
+
+<button class="button" onclick="window.location.href='tel:91700002734'">拨打电话 / Call</button>
+
+<div class="custom-text">
+  <!-- 在这里添加自定义文本 -->
+  <p>请确认车牌 / Please confirm the plate</p>
+	<p>苏E·53**T</p>
+</div>
+
+<footer>
+  © 2024 ELT Group
+</footer>
+
+</body>
+</html>
